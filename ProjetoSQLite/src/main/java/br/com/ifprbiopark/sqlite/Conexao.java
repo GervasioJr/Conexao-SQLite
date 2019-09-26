@@ -23,6 +23,9 @@ public class Conexao {
             Statement stm = c.createStatement();
             // Criando uma tabela
             stm.execute("CREATE TABLE IF NOT EXISTS ALUNO (ID INTEGER, NOME VARCHAR(50))");
+            
+            // Inserindo registros
+            stm.execute("INSERT INTO ALUNO (ID, NOME) VALUES (1,'BRUNA'), (2,'MARCOS')");
         } catch (SQLException ex) {
             Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null, ex);
         }
