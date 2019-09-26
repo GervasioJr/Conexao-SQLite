@@ -26,6 +26,14 @@ public class Conexao {
             
             // Inserindo registros
             stm.execute("INSERT INTO ALUNO (ID, NOME) VALUES (1,'BRUNA'), (2,'MARCOS')");
+            
+            // Lendo registros
+            String sql = "SELECT * FROM ALUNO";
+            PreparedStatement psm = c.prepareStatement(sql);
+            ResultSet rs = psm.executeQuery();
+            while (rs.next()){
+                System.out.println("");
+            }
         } catch (SQLException ex) {
             Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null, ex);
         }
