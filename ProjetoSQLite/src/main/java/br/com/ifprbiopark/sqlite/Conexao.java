@@ -32,7 +32,11 @@ public class Conexao {
             PreparedStatement psm = c.prepareStatement(sql);
             ResultSet rs = psm.executeQuery();
             while (rs.next()){
-                System.out.println("");
+                System.out.println("ID: ");
+                System.out.println(rs.getString("ID"));
+                System.out.println("NOME: ");
+                System.out.println(rs.getString("NOME"));
+                System.out.println("-----------");
             }
         } catch (SQLException ex) {
             Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null, ex);
